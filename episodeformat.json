@@ -1,0 +1,16 @@
+//JAVASCRIPT JSON FORMAT
+{
+    sublineTitle: "The Bad Batch Understandings",
+    "episodes": [
+        {
+            name: "The Citadel",
+            runtime: 25,
+            episodeNumber: 18,
+            season: 3,
+            thumbnail: "S318.png",
+            onhover() {
+                //This is where the citadels understandings go :p
+            }
+        }
+    ]
+}

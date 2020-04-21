@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+    user-select: none;
+}
+
+body {
+    outline: none;
+    background-color: #091053;
+    color: #fff;
+}
+
+.toptitle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+    font-family: sans-serif;
+    user-select: none;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.helpcontainer {
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.helpcontainer .help {
+    width: 500px;
+}
+
+.helpcontainer .help .helptext {
+    font-family: 'Indie Flower', cursive;
+    user-select: none;
+    font-size: 30px;
+}
+
+.arrowcontainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    z-index: -2;
+}
+
+.arrowcontainer svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.timeline {
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: 220px;
+    background-color: navy;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.season7 {
+    position: fixed;
+    bottom: 225px;
+    font-family: sans-serif;
+    font-size: 25px;
+    left: 5px;
+}
+
+.timeline .arrow-forward {
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    height: 220px;
+    cursor: pointer;
+    width: 50px;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    border-radius: 0px 5px 5px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    user-select: none;
+}
+
+.timeline .arrow-back {
+    position: fixed;
+    left: 5px;
+    bottom: 5px;
+    height: 220px;
+    cursor: pointer;
+    width: 50px;
+    background: linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    border-radius: 5px 0px 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    user-select: none;
+}
+
+.background {
+    position: fixed;
+    z-index: -3;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(scale.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-mask: radial-gradient(ellipse 100% 100% at 100% 100%,#000,transparent);
+    mask: radial-gradient(ellipse 100% 100% at 100% 100%,#000,transparent);
+}
+
+.timeline .episode {
+    height: 100%;
+    width: 300px;
+    background: transparent;
+    display: inline-block;
+    transition: 0.3s;
+    transform-origin: 50% 100%;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.timeline .episode:hover {
+    transform: scale(1.05);
+}
+
+.timeline .first-ep {
+    transform-origin: 0% 100%;
+}
+
+.timeline .episode img {
+    position: absolute;
+    width: 290px;
+    left: 5px;
+    top: 5px;
+    border-radius: 5px;
+}
+
+.timeline .episode .title {
+    position: absolute;
+    bottom: 2px;
+    left: 5px;
+}
+
+
+
+/* SUBLINES!! WOOT WOOT */
+.subline {
+    position: fixed;
+    opacity: 0.8;
+    position: fixed;
+    left: 5px;
+    width: 200%;
+    height: 200px;
+    background: navy;
+    border-radius: 5px;
+    bottom: 250px;
+    opacity: 0;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.subline-level-1 { bottom: 250px; }
+.subline-level-2 { bottom: 455px; }
+.subline-level-3 { bottom: 660px; }
+.sublineScroll {animation: sublineScroll 18s infinite;}
+.sublineScrollmore {animation: sublineScrollmore 26s infinite;}
+@keyframes sublineScroll {
+    0% {
+        left: 5px;
+    }
+    50% {
+        left: -100%;
+    }
+    100% {
+        left: 5px;
+    }
+}
+@keyframes sublineScrollmore {
+    0% {
+        left: 5px;
+    }
+    50% {
+        left: -170%;
+    }
+    100% {
+        left: 5px;
+    }
+}
+
+.subline .episode {
+    height: 100%;
+    width: 300px;
+    background: transparent;
+    display: inline-block;
+    transition: 0.3s;
+    transform-origin: 50% 100%;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.subline .episode img {
+    position: absolute;
+    width: 290px;
+    left: 5px;
+    top: 5px;
+    border-radius: 5px;
+}
+
+.subline .episode .title {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 13px;
+}
